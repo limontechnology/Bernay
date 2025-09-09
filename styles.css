@@ -8,6 +8,7 @@ nav {
     justify-content: space-between;
     padding: 0 24px;
     border-bottom: 1px solid #c7c7c7;
+    background: linear-gradient(91deg, rgba(3, 2, 2, 1) 0%, rgba(199, 130, 87, 1) 50%, rgba(237, 221, 83, 1) 100%);
 }
 
 .logo {
@@ -28,6 +29,15 @@ nav {
     display: flex;
 }
 
-.navbar-left ul {
+.navbar-left ul,
+.navbar-right ul {
     margin: 12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a {
+    text-decoration: none;
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 8px;
 }
