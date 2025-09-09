@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-left ul {
+    margin: 12px;
+}
