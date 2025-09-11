@@ -6,9 +6,8 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 24px;
-    border-bottom: 1px solid #c7c7c7;
-    background: linear-gradient(91deg, rgba(3, 2, 2, 1) 0%, rgba(199, 130, 87, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    padding: 0 25px;
+    background-color: #291b1b;
 }
 
 .logo {
@@ -37,7 +36,27 @@ nav {
 .navbar-left ul li a,
 .navbar-right ul li a {
     text-decoration: none;
-    border: 1px solid;
     padding: 8px;
     border-radius: 8px;
+    color: coral;
+}
+
+.img-wallpaper {
+    width: 100%;
+    min-width: 320px;
+    height: 60vh;
+    background-image: url(Images/Bernay-Wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.img-wallpaper h2 {
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    position: absolute;
 }
