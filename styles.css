@@ -1,3 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
@@ -6,18 +18,22 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    height: 75px;
     padding: 0 25px;
     background-color: #291b1b;
+    align-items: center;
 }
 
 .logo {
     width: 100px;
+    position: relative;
+    top: 5px;
 }
 
 .navbar-left ul,
 .navbar-right ul {
     list-style: none;
-    padding: 0;
+    padding: 5px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -39,6 +55,23 @@ nav {
     padding: 8px;
     border-radius: 8px;
     color: coral;
+    font-size: 1.5rem;
+}
+
+a {
+    font-size: 1.5rem;
+}
+
+.progress-container {
+    width: 100%;
+    height: 1px;
+    background: #121f3d;
+}
+
+.progress-bar {
+    height: 1px;
+    background: #97c93e;
+    width: 0%;
 }
 
 .img-wallpaper {
@@ -59,4 +92,156 @@ nav {
     font-weight: bold;
     line-height: 2.6rem;
     position: absolute;
+}
+
+/* From Uiverse.io by MuhammadHasann */
+button {
+    position: relative;
+    padding: 5px 20px;
+    background: #291b1b;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: coral;
+    border: 3px solid #291b1b;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+}
+
+button:hover {
+    background: transparent;
+    color: #fec195;
+    box-shadow: 0 0 25px #fec1958c;
+    z-index: 1;
+}
+
+button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #fffdef;
 }
