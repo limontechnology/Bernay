@@ -5,6 +5,14 @@
 
 }
 
+:root {
+    --primary-color: #ffffff;
+}
+
+.dark-mode {
+    --primary-color: #291b1b;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -13,6 +21,7 @@ header {
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    background-color: var(--primary-color);
 }
 
 nav {
@@ -142,7 +151,7 @@ a {
     position: absolute;
 }
 
-.themeToggle {
+.theme-btn {
     color: #bbb;
     width: 3em;
 }
