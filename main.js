@@ -21,3 +21,23 @@ themeToggle.addEventListener('change', () => {
         body.classList.remove('dark-mode');
     }
 });
+
+// Al cargar la página
+
+/* 
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.checked = true;
+}
+
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+ */

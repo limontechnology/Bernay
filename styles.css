@@ -7,10 +7,16 @@
 
 :root {
     --primary-color: #ffffff;
+    --color: #000000;
+    --shopping-cart-botton: #291b1b;
+    --shopping-cart-p: #ff7f50;
 }
 
 .dark-mode {
     --primary-color: #291b1b;
+    --color: #c49e68;
+    --shopping-cart-botton: #ff7f50;
+    --shopping-cart-p: #291b1b;
 }
 
 header {
@@ -465,6 +471,7 @@ button:hover .star-6 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: bold;
+    color: var(--color);
 }
 
 .CartBtn {
@@ -472,7 +479,7 @@ button:hover .star-6 {
     height: 35px;
     border-radius: 12px;
     border: none;
-    background-color: #291b1b;
+    background-color: var(--shopping-cart-botton);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -485,10 +492,11 @@ button:hover .star-6 {
 
 .CartBtn p {
     font-size: 1.2rem;
+    color: var(--shopping-cart-p);
 }
 
 .CartBtn:hover {
-    background-color: #291b1b;
+    background-color: var(--shopping-cart-botton);
     color: coral;
 }
 
@@ -509,7 +517,7 @@ button:hover .star-6 {
 }
 
 .IconContainer svg {
-    fill: coral;
+    fill: var(--shopping-cart-p);
 }
 
 .icon {
