@@ -13,7 +13,7 @@
 }
 
 .dark-mode {
-    --primary-color: #291b1b;
+    --primary-color: #151212;
     --color: #c49e68;
     --shopping-cart-botton: #ff7f50;
     --shopping-cart-p: #291b1b;
@@ -551,6 +551,17 @@ button:hover .star-6 {
 .CartBtn:active {
     transform: scale(0.95);
     transition-duration: .5s;
+}
+
+footer {
+    height: 100%;
+    width: 100%;
+    background-color: #291b1b;
+    color: #ffffff;
+}
+
+footer ul {
+    font-size: large;
 }
 
 @media (max-width: 641px) {
