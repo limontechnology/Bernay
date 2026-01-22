@@ -22,22 +22,32 @@ themeToggle.addEventListener('change', () => {
     }
 });
 
-// Al cargar la página
+// footer-panel
 
-/* 
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-  themeToggle.checked = true;
+var animatedAccordion = document.getElementsByClassName('accordion');
+var i;
+
+for (i = 0; i < animatedAccordion.length; i++) {
+  animatedAccordion[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+
+    var panel = this.nextElementSibling;
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
 }
 
-themeToggle.addEventListener('change', () => {
-  if (themeToggle.checked) {
-    body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
-  }
-});
-
- */
+for (i = 0; i < animatedAccordion.length; i++) {
+  animatedAccordion[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+}

@@ -417,6 +417,7 @@ button:hover .star-6 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 35px;
+    margin: 55px;
 }
 
 .cards-container {
@@ -553,15 +554,78 @@ button:hover .star-6 {
     transition-duration: .5s;
 }
 
-footer {
+.footer-list {
+    display: flex;
     height: 100%;
     width: 100%;
     background-color: #291b1b;
     color: #ffffff;
 }
 
-footer ul {
+.footer-list ul {
     font-size: large;
+    margin: 50px;
+    margin-left: 100px;
+    color: darkgray;
+}
+
+.footer-list li {
+    margin: 10px;
+    color: coral;
+}
+
+.accordion-panel {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    .accordion-panel {
+        display: block;
+    }
+
+    .footer-list {
+        display: none;
+    }
+
+    .accordion {
+        background-color: #291b1b;
+        color: coral;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        border-radius: 0px;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
+
+    .accordion::after {
+        content: '\02795';
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active::after {
+        content: '\2796';
+    }
 }
 
 @media (max-width: 641px) {
