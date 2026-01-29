@@ -25,24 +25,11 @@ themeToggle.addEventListener('change', () => {
 // footer-panel
 
 var animatedAccordion = document.getElementsByClassName('accordion');
-var i;
 
-for (i = 0; i < animatedAccordion.length; i++) {
+for (var i = 0; i < animatedAccordion.length; i++) {
   animatedAccordion[i].addEventListener('click', function() {
-    this.classList.toggle('active');
+    this.classList.toggle('active'); // cambia el simbolo
 
-    var panel = this.nextElementSibling;
-    if (panel.style.display === 'block') {
-      panel.style.display = 'none';
-    } else {
-      panel.style.display = 'block';
-    }
-  });
-}
-
-for (i = 0; i < animatedAccordion.length; i++) {
-  animatedAccordion[i].addEventListener('click', function() {
-    this.classList.toggle('active');
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;

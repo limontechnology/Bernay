@@ -578,7 +578,25 @@ button:hover .star-6 {
     display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) {}
+
+@media (max-width: 641px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar-right {
+        margin-left: -40px;
+        margin-right: -30px;
+    }
+
+    .logo {
+        position: relative;
+    }
 
     .accordion-panel {
         display: block;
@@ -601,15 +619,20 @@ button:hover .star-6 {
         border-radius: 0px;
     }
 
+    .panel p {
+        font-size: 1.2rem;
+        margin: 15px;
+        color: var(--color);
+    }
+
     .active,
     .accordion:hover {
-        background-color: #ccc;
+        background-color: #372525;
     }
 
     .panel {
         padding: 0 18px;
-        background-color: white;
-        display: none;
+        background-color: var(--primary-color);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-in-out;
@@ -621,28 +644,11 @@ button:hover .star-6 {
         color: #777;
         float: right;
         margin-left: 5px;
+        font-size: 10px;
     }
 
     .active::after {
         content: '\2796';
     }
-}
 
-@media (max-width: 641px) {
-    .hamburger {
-        display: block;
-    }
-
-    .navbar-left ul {
-        display: none;
-    }
-
-    .navbar-right {
-        margin-left: -40px;
-        margin-right: -30px;
-    }
-
-    .logo {
-        position: relative;
-    }
 }
