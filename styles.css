@@ -6,10 +6,11 @@
 }
 
 :root {
-    --primary-color: #ffffff;
+    --primary-color: #fff;
     --color: #000000;
     --shopping-cart-botton: #291b1b;
     --shopping-cart-p: #ff7f50;
+    --sidenavmenu: #f3ecec;
 }
 
 .dark-mode {
@@ -17,6 +18,7 @@
     --color: #c49e68;
     --shopping-cart-botton: #ff7f50;
     --shopping-cart-p: #291b1b;
+    --sidenavmenu: #291b1b;
 }
 
 header {
@@ -49,9 +51,7 @@ nav {
 }
 
 .hamburger svg {
-    /* The size of the SVG defines the overall size */
     height: 35em;
-    /* Define the transition for transforming the SVG */
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -61,7 +61,6 @@ nav {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
-    /* Define the transition for transforming the Stroke */
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -554,6 +553,46 @@ button:hover .star-6 {
     transition-duration: .5s;
 }
 
+/*Mobile Menu*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--sidenavmenu);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 76px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--color);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
 .footer-list {
     display: flex;
     height: 100%;
@@ -577,8 +616,6 @@ button:hover .star-6 {
 .accordion-panel {
     display: none;
 }
-
-@media (max-width: 1000px) {}
 
 @media (max-width: 641px) {
     .hamburger {
@@ -641,10 +678,8 @@ button:hover .star-6 {
     .accordion::after {
         content: '\02795';
         font-size: 13px;
-        color: #777;
         float: right;
         margin-left: 5px;
-        font-size: 10px;
     }
 
     .active::after {

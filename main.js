@@ -9,7 +9,7 @@ function myFunction() {
     document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-// theme-btn
+// Dark-Mode & Light-Mode Theme-Btn
 
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
@@ -38,3 +38,16 @@ for (var i = 0; i < animatedAccordion.length; i++) {
     }
   });
 }
+
+//Mobile Menu Sidenav 
+
+const toggleNavMenu = document.getElementById('toggleNav');
+const sidenavMenu = document.getElementById('mySidenav');
+
+toggleNavMenu.addEventListener('change', () => {
+  if (toggleNavMenu.checked) {
+    sidenavMenu.style.width = '250px';
+  } else {
+    sidenavMenu.style.width = '0';
+  }
+})
