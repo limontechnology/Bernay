@@ -11,6 +11,7 @@
     --shopping-cart-botton: #291b1b;
     --shopping-cart-p: #ff7f50;
     --sidenavmenu: #f3ecec;
+    --sidehovermenu: -20px 5px 15px 0px rgba(0, 0, 0, 0.25);
 }
 
 .dark-mode {
@@ -19,6 +20,7 @@
     --shopping-cart-botton: #ff7f50;
     --shopping-cart-p: #291b1b;
     --sidenavmenu: #291b1b;
+    --sidehovermenu: -18px 0px 15px 0px rgb(255 127 80);
 }
 
 header {
@@ -140,12 +142,12 @@ a {
     width: 100%;
     min-width: 320px;
     height: 60vh;
-    background-image: url(Images/Bernay-Wallpaper.jpg);
+    background-image: url(Images/collar-muestra-bernay.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    background-attachment: fixed;
+    background-attachment: local;
 }
 
 .img-wallpaper h2 {
@@ -571,7 +573,7 @@ button:hover .star-6 {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 15px 8px 18px 32px;
     text-decoration: none;
     font-size: 25px;
     color: var(--color);
@@ -579,8 +581,27 @@ button:hover .star-6 {
     transition: 0.3s;
 }
 
+.sidenav label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.sidenav svg {
+    height: 20px;
+    margin-top: 6px;
+    fill: var(--color);
+}
+
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #ff7f50;
+}
+
+.sidenav label:hover {
+    box-shadow: var(--sidehovermenu);
 }
 
 @media screen and (max-height: 450px) {
@@ -673,6 +694,7 @@ button:hover .star-6 {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-in-out;
+        position: relative;
     }
 
     .accordion::after {
