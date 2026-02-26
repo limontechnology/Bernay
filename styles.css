@@ -769,6 +769,27 @@ button:hover .star-6 {
     display: none;
 }
 
+@media (max-width: 884px) {
+    .socialmedia-button {
+        display: flex;
+        margin: 20px 13px;
+    }
+
+    .socialmedia-space {
+        margin: 25px;
+    }
+
+    .bernay-footer-logo img {
+        height: 100px;
+        position: absolute;
+        margin: 95px 25px;
+    }
+
+    .footer-border {
+        left: 100px;
+    }
+}
+
 @media (max-width: 641px) {
 
     .bernay-footer-logo img {
@@ -812,6 +833,7 @@ button:hover .star-6 {
         transition: 0.4s;
         border-radius: 0px;
         font-size: 1.3rem;
+        position: relative;
     }
 
     .panel p {
@@ -853,13 +875,14 @@ button:hover .star-6 {
         background-color: #291b1b;
         height: 75px;
         display: flex;
+        position: relative;
     }
 
     .socialmedia-button {
         display: flex;
         margin: 13px;
         position: relative;
-        left: 150px;
+        left: 95px;
     }
 
 }
