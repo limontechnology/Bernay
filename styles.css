@@ -141,7 +141,7 @@ a {
 .img-wallpaper {
     width: 100%;
     min-width: 320px;
-    height: 60vh;
+    height: 85vh;
     background-image: url(Images/collar-muestra-bernay.jpg);
     background-position: center;
     background-size: cover;
@@ -555,9 +555,25 @@ button:hover .star-6 {
     transition-duration: .5s;
 }
 
+.bernay-footer-logo {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 40vh;
+    align-items: center;
+}
+
 .bernay-footer-logo img {
     height: 100px;
     position: static;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.footer-list ul {
+    display: grid;
+    align-content: space-between;
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    margin: 40px;
 }
 
 .footer-bottom {
@@ -682,10 +698,6 @@ button:hover .star-6 {
     background: #00d757;
 }
 
-.customer-service {
-    padding-left: 125px;
-}
-
 /*Mobile Menu*/
 
 .sidenav {
@@ -735,16 +747,6 @@ button:hover .star-6 {
     box-shadow: var(--sidehovermenu);
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
 .footer-list {
     display: flex;
     height: 100%;
@@ -755,8 +757,6 @@ button:hover .star-6 {
 
 .footer-list ul {
     font-size: large;
-    margin: 50px;
-    margin-left: 100px;
     color: darkgray;
 }
 
@@ -769,7 +769,7 @@ button:hover .star-6 {
     display: none;
 }
 
-@media (max-width: 884px) {
+@media (max-width: 825px) {
     .socialmedia-button {
         display: flex;
         margin: 20px 13px;
@@ -782,11 +782,27 @@ button:hover .star-6 {
     .bernay-footer-logo img {
         height: 100px;
         position: static;
-        margin: 95px 25px;
     }
 
     .footer-border {
         left: 100px;
+    }
+
+    .navbar-left li {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .navbar-left li:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media (max-width: 725px) {
+    .navbar-left li:nth-child(n+4) {
+        display: none;
     }
 }
 
@@ -885,4 +901,14 @@ button:hover .star-6 {
         left: 95px;
     }
 
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
