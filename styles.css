@@ -6,25 +6,30 @@
 }
 
 :root {
-    --primary-color: #fff;
+    --primary-color: #f9edfd;
     --color: #000000;
+    --progress-bar: #8686ec;
     --shopping-cart-botton: #291b1b;
     --shopping-cart-p: #ff7f50;
     --sidenavmenu: #f3ecec;
     --sidehovermenu: -20px 5px 15px 0px rgba(0, 0, 0, 0.25);
+    --diamond: 0.45;
+    --diamond-shadow: rgb(249 237 253);
+
 }
 
 .dark-mode {
-    --primary-color: #151212;
+    --primary-color: #223b48;
     --color: #c49e68;
+    --progress-bar: yellow;
     --shopping-cart-botton: #ff7f50;
     --shopping-cart-p: #291b1b;
-    --sidenavmenu: #291b1b;
+    --sidenavmenu: #4b4d5e;
     --sidehovermenu: -18px 0px 15px 0px rgb(255 127 80);
+    --diamond-shadow: rgb(34 59 72);
 }
 
 header {
-    position: sticky;
     top: 0;
 }
 
@@ -35,12 +40,15 @@ body {
 }
 
 nav {
+    height: 75px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 75px;
     padding: 0 25px;
-    background-color: #291b1b;
+    background-color: white;
     align-items: center;
+    position: fixed;
+    z-index: 1000;
 }
 
 .hamburger {
@@ -81,9 +89,10 @@ nav {
 }
 
 .logo {
-    width: 100px;
+    width: 80px;
+    height: 75px;
     position: relative;
-    top: 5px;
+    top: 10px;
 }
 
 .navbar-left ul,
@@ -106,7 +115,7 @@ nav {
 
 .navbar-left ul,
 .navbar-right ul {
-    margin: 12px;
+    margin: 12px 30px 12px 12px;
 }
 
 .navbar-left ul li a,
@@ -120,6 +129,7 @@ nav {
 
 .navbar-right li {
     padding: 3px;
+    margin-right: 8px;
 }
 
 a {
@@ -128,34 +138,204 @@ a {
 
 .progress-container {
     width: 100%;
-    height: 1px;
-    background: #121f3d;
+    height: 2.5px;
+    background: #efc14a;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 75px;
 }
 
 .progress-bar {
-    height: 1px;
-    background: #97c93e;
+    height: 2.5px;
+    background: var(--progress-bar);
     width: 0%;
 }
 
-.img-wallpaper {
-    width: 100%;
-    min-width: 320px;
-    height: 85vh;
-    background-image: url(Images/collar-muestra-bernay.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    background-attachment: local;
+
+.slideshow-container {
+    position: relative;
+    max-width: 70%;
+    margin: auto;
 }
 
-.img-wallpaper h2 {
-    padding-top: 60px;
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2.6rem;
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
     position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6 ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.current-slide {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.slide-text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    position: relative;
+    width: 30px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.diamond:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #bdddf4;
+    transform: skew(-30deg);
+    z-index: 2;
+}
+
+.diamond:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 60px;
+    border-style: solid;
+    border-width: 9px 0 111px 5px;
+    border-color: #8bcaf6 transparent transparent transparent;
+    transform: skew(45deg);
+}
+
+.diamond:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    display: block;
+    width: 8px;
+    height: 5px;
+    background: #8bcaf6;
+    z-index: 1;
+}
+
+.diamond:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #5dadec;
+    border-left: 8px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.diamond:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #5dadec;
+    transform: skew(30deg);
+    z-index: 3;
+}
+
+.diamond:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -108px;
+    border-style: solid;
+    border-width: 9px 5px 207px 0px;
+    border-color: #4289c1 transparent transparent transparent;
+    transform: skew(-45deg);
+}
+
+.diamond:nth-child(4) {
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0px;
+    width: 10px;
+    height: 2px;
+    background: #bfc8f0;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.dot.slide-active .diamond,
+.dot.slide-active .diamond::before {
+    background: #e22c22;
+    border-color: #ca3030 transparent transparent transparent;
+    box-shadow: 0 0 10px var(--diamond-shadow);
+}
+
+.dot.slide-active .diamond:nth-child(1)::before {
+    border-width: 9px 0px 111px 5px;
+    border-color: #ca3b17 transparent transparent transparent;
+    background: transparent;
+}
+
+.dot.slide-active .diamond:nth-child(2)::before {
+    border-top: 8px solid #ca3b17;
+    border-left: 8px solid transparent;
+    border-right: 7px solid transparent;
+    background: transparent;
+}
+
+.dot.slide-active .diamond:nth-child(3)::before {
+    border-width: 9px 5px 207px 0px;
+    border-color: #ca3b17 transparent transparent transparent;
+    background: transparent;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .theme-btn {
@@ -265,11 +445,11 @@ a {
 .hover-stars {
     position: relative;
     padding: 5px 20px;
-    background: #291b1b;
+    background: white;
     font-size: 1.5rem;
     font-weight: 500;
     color: coral;
-    border: 3px solid #291b1b;
+    border: 3px solid #ffffff00;
     border-radius: 8px;
     box-shadow: 0 0 0 #fec1958c;
     transition: all 0.3s ease-in-out;
@@ -282,7 +462,7 @@ a {
     left: 20%;
     width: 25px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
 }
@@ -293,7 +473,7 @@ a {
     left: 45%;
     width: 15px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
 }
@@ -304,7 +484,7 @@ a {
     left: 40%;
     width: 5px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
 }
@@ -315,7 +495,7 @@ a {
     left: 40%;
     width: 8px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
 }
@@ -326,7 +506,7 @@ a {
     left: 45%;
     width: 15px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
 }
@@ -337,15 +517,15 @@ a {
     left: 50%;
     width: 5px;
     height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
+    filter: drop-shadow(0 0 0 yellow);
     z-index: -5;
     transition: all 0.8s ease;
 }
 
 button:hover {
     background: transparent;
-    color: #fec195;
-    box-shadow: 0 0 25px #fec1958c;
+    color: #e965cc;
+    box-shadow: 0 0 25px #d677348c;
     z-index: 1;
 }
 
@@ -355,7 +535,7 @@ button:hover .star-1 {
     left: -30%;
     width: 25px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
@@ -365,7 +545,7 @@ button:hover .star-2 {
     left: 10%;
     width: 15px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
@@ -375,7 +555,7 @@ button:hover .star-3 {
     left: 25%;
     width: 5px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
@@ -385,7 +565,7 @@ button:hover .star-4 {
     left: 80%;
     width: 8px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
@@ -395,7 +575,7 @@ button:hover .star-5 {
     left: 115%;
     width: 15px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
@@ -405,12 +585,12 @@ button:hover .star-6 {
     left: 60%;
     width: 5px;
     height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
+    filter: drop-shadow(0 0 10px coral);
     z-index: 2;
 }
 
 .fil0 {
-    fill: #fffdef;
+    fill: rgb(247, 215, 157);
 }
 
 .main-container {
@@ -577,7 +757,7 @@ button:hover .star-6 {
 }
 
 .footer-bottom {
-    background-color: #291b1b;
+    background-color: #1b1c29;
     height: 100px;
     display: flex;
 }
@@ -740,7 +920,7 @@ button:hover .star-6 {
 }
 
 .sidenav a:hover {
-    color: #ff7f50;
+    color: #ebebeb;
 }
 
 .sidenav label:hover {
@@ -751,7 +931,7 @@ button:hover .star-6 {
     display: flex;
     height: 100%;
     width: 100%;
-    background-color: #291b1b;
+    background-color: #1b1c29;
     color: #ffffff;
 }
 
@@ -808,10 +988,10 @@ button:hover .star-6 {
 
 @media (max-width: 641px) {
 
-    .img-wallpaper {
+    /* .slideshow-container {
         width: 100%;
         height: 50vh;
-    }
+    } */
 
     .bernay-footer-logo img {
         display: none;
@@ -832,6 +1012,7 @@ button:hover .star-6 {
 
     .logo {
         position: relative;
+        top: 0px;
     }
 
     .accordion-panel {
@@ -843,7 +1024,7 @@ button:hover .star-6 {
     }
 
     .accordion {
-        background-color: #291b1b;
+        background-color: #1b1c29;
         color: coral;
         cursor: pointer;
         padding: 20px;
@@ -863,9 +1044,10 @@ button:hover .star-6 {
         color: var(--color);
     }
 
-    .active,
+    .accordion-active,
     .accordion:hover {
-        background-color: #372525;
+        background-color: #222333;
+        color: rgb(201, 200, 200);
     }
 
     .panel {
@@ -882,9 +1064,10 @@ button:hover .star-6 {
         font-size: 13px;
         float: right;
         margin-left: 5px;
+        filter: sepia(1);
     }
 
-    .active::after {
+    .accordion-active::after {
         content: '\2796';
     }
 
@@ -893,7 +1076,7 @@ button:hover .star-6 {
     }
 
     .footer-bottom {
-        background-color: #291b1b;
+        background-color: #1b1c29;
         height: 75px;
         display: flex;
         position: relative;
@@ -915,5 +1098,9 @@ button:hover .star-6 {
 
     .sidenav a {
         font-size: 18px;
+    }
+
+    .sidenav:hover {
+        color: white;
     }
 }
