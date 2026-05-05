@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #f9edfd;
+    --primary-color: #fafded;
     --color: #000000;
     --progress-bar: #8686ec;
     --shopping-cart-botton: #291b1b;
@@ -14,7 +14,7 @@
     --sidenavmenu: #f3ecec;
     --sidehovermenu: -20px 5px 15px 0px rgba(0, 0, 0, 0.25);
     --diamond: 0.45;
-    --diamond-shadow: rgb(249 237 253);
+    --diamond-shadow: #fafded;
 
 }
 
@@ -920,7 +920,7 @@ button:hover .star-6 {
 }
 
 .sidenav a:hover {
-    color: #ebebeb;
+    color: coral;
 }
 
 .sidenav label:hover {
@@ -988,11 +988,6 @@ button:hover .star-6 {
 
 @media (max-width: 641px) {
 
-    /* .slideshow-container {
-        width: 100%;
-        height: 50vh;
-    } */
-
     .bernay-footer-logo img {
         display: none;
     }
@@ -1010,8 +1005,9 @@ button:hover .star-6 {
         margin-right: -15px;
     }
 
+
     .navbar-right ul {
-        padding: 10px;
+        margin: 12px 50px 12px -30px;
     }
 
     .logo {
@@ -1020,9 +1016,9 @@ button:hover .star-6 {
     }
 
     .slideshow-main {
-        width: 130%;
+        width: 100%;
         position: relative;
-        right: 55px;
+        right: 50px;
     }
 
     .prev,
@@ -1032,12 +1028,15 @@ button:hover .star-6 {
 
     .current-slide {
         margin-top: 80px;
+        position: relative;
+        left: 55px;
     }
 
     .slideshow-container {
         position: relative;
-        margin: auto;
+        max-width: 90%;
         top: 70px;
+        left: 50px;
     }
 
     .accordion-panel {
