@@ -598,7 +598,7 @@ button:hover .star-6 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 35px;
-    margin: 55px;
+    margin: 30px;
 }
 
 .body-container {
@@ -608,6 +608,7 @@ button:hover .star-6 {
     background-color: white;
     margin-top: 50px;
     border-radius: 20px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .opening-section {
@@ -616,14 +617,14 @@ button:hover .star-6 {
 
 .opening-section img {
     width: 100%;
-    margin-top: 10px;
+    margin: 25px;
     object-fit: scale-down;
     border-radius: 10px;
 }
 
 .opening-phrase p {
     font-size: 30px;
-    margin: 200px 100px;
+    margin: 270px 100px;
 }
 
 .cards-container {
@@ -974,7 +975,8 @@ button:hover .star-6 {
     display: none;
 }
 
-@media (max-width: 825px) {
+@media (max-width: 885px) {
+
     .socialmedia-button {
         display: flex;
         margin: 20px 13px;
@@ -1004,27 +1006,35 @@ button:hover .star-6 {
         display: none;
     }
 
+    .slideshow-container {
+        position: relative;
+        max-width: 95%;
+        margin: auto;
+    }
+
     .body-container {
         display: flex;
         flex-direction: column;
-        height: 1250px;
+        height: 470px;
     }
 
     .opening-section {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        margin: 15px;
     }
 
     .opening-section img {
-        width: 100%;
+        width: 35%;
         object-fit: contain;
-        margin: 0px;
+        margin: 15px;
+        border-radius: 10px;
     }
 
     .opening-phrase p {
-        font-size: 2.0rem;
-        margin: 65px 20px;
+        font-size: 2.8rem;
+        margin: -380px 70px 0px 370px;
+        font-style: italic;
     }
 }
 
@@ -1082,7 +1092,7 @@ button:hover .star-6 {
 
     .slideshow-container {
         position: relative;
-        max-width: 90%;
+        max-width: 95%;
         top: 70px;
         left: 50px;
     }
@@ -1091,6 +1101,7 @@ button:hover .star-6 {
         display: flex;
         flex-direction: column;
         height: 770px;
+        margin-top: 75px;
     }
 
     .opening-section {
@@ -1107,7 +1118,8 @@ button:hover .star-6 {
 
     .opening-phrase p {
         font-size: 2.0rem;
-        margin: 65px 20px;
+        margin: 35px 20px;
+        font-style: italic;
     }
 
     .accordion-panel {
