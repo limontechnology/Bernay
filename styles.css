@@ -606,9 +606,10 @@ button:hover .star-6 {
     height: 50%;
     display: flex;
     background-color: white;
-    margin-top: 50px;
+    margin-top: -75px;
     border-radius: 20px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+    z-index: 3;
 }
 
 .opening-section {
@@ -1167,7 +1168,7 @@ button:hover .star-6 {
         display: flex;
         flex-direction: column;
         height: 770px;
-        margin-top: 75px;
+        margin-top: -90px;
     }
 
     .opening-section {
