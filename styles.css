@@ -627,6 +627,64 @@ button:hover .star-6 {
     margin: 270px 100px;
 }
 
+.hot-sale {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hot-sale-img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 15px;
+}
+
+.hs-img {
+    background-image: url(Images/Hot-Sale-Background.png);
+}
+
+.hs-logo {
+    background-image: url(Images/Hot-Sale-Logo.png);
+}
+
+.hot-sale-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.hot-sale-logo {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    right: 355px;
+    z-index: 2;
+}
+
+.hs-phrase p {
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 480%;
+    transform: translate(-100%, -55%);
+    z-index: 2;
+    width: 700px;
+    text-align: center;
+    font-size: 3.0rem;
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
@@ -1036,6 +1094,14 @@ button:hover .star-6 {
         margin: -380px 70px 0px 370px;
         font-style: italic;
     }
+
+    .hot-sale-logo {
+        right: 310px;
+    }
+
+    .hs-phrase p {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 725px) {
@@ -1120,6 +1186,22 @@ button:hover .star-6 {
         font-size: 2.0rem;
         margin: 35px 20px;
         font-style: italic;
+    }
+
+    .hot-sale {
+        height: 350px;
+    }
+
+    .hot-sale-logo {
+        right: 0px;
+        bottom: 80px;
+    }
+
+    .hs-phrase p {
+        top: 115%;
+        left: 205%;
+        width: 300px;
+        font-size: 2.3rem;
     }
 
     .accordion-panel {
