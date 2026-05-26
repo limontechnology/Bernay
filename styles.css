@@ -612,6 +612,7 @@ button:hover .star-6 {
     z-index: 3;
 }
 
+
 .opening-section {
     display: flex;
 }
@@ -624,8 +625,33 @@ button:hover .star-6 {
 }
 
 .opening-phrase p {
-    font-size: 30px;
+    font-size: 3.0rem;
     margin: 270px 100px;
+}
+
+.worldcup-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background: #8cff9c;
+    background: linear-gradient(90deg, rgba(140, 255, 156, 1) 0%, rgba(255, 255, 255, 1) 37%, rgba(255, 255, 255, 1) 66%, rgba(255, 159, 130, 1) 100%);
+    border-radius: 20px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+    z-index: 3;
+}
+
+.worldcup-section img {
+    width: 60%;
+    margin: 25px;
+    object-fit: scale-down;
+    border-radius: 10px;
+}
+
+.worldcup-phrase p {
+    font-size: 3.0rem;
+    margin: 255px 100px;
+    position: relative;
+    right: 100px;
 }
 
 .hot-sale {
@@ -1103,6 +1129,31 @@ button:hover .star-6 {
     .hs-phrase p {
         font-size: 2.5rem;
     }
+
+    .worldcup-container {
+        display: flex;
+        flex-direction: column;
+        height: 410px;
+    }
+
+    .worldcup-section {
+        display: flex;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .worldcup-section img {
+        width: 35%;
+        object-fit: contain;
+        margin: 15px;
+        border-radius: 10px;
+    }
+
+    .worldcup-phrase p {
+        font-size: 2.8rem;
+        margin: -285px 0px 0px 535px;
+        font-style: italic;
+    }
 }
 
 @media (max-width: 725px) {
@@ -1203,6 +1254,32 @@ button:hover .star-6 {
         left: 205%;
         width: 300px;
         font-size: 2.3rem;
+    }
+
+    .worldcup-container {
+        display: flex;
+        flex-direction: column;
+        height: 615px;
+    }
+
+    .worldcup-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+
+    .worldcup-section img {
+        width: 90%;
+        object-fit: contain;
+        margin: 15px;
+        border-radius: 10px;
+    }
+
+    .worldcup-phrase p {
+        font-size: 2.0rem;
+        margin: 30px -45px 0px 165px;
+        font-style: italic;
     }
 
     .accordion-panel {
