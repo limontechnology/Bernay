@@ -712,6 +712,23 @@ button:hover .star-6 {
     font-size: 3.0rem;
 }
 
+.banners-content {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 240px);
+    gap: 35px;
+    margin: 10px 10px 100px 10px;
+}
+
+.banner-icon img {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
@@ -1154,6 +1171,11 @@ button:hover .star-6 {
         margin: -285px 0px 0px 535px;
         font-style: italic;
     }
+
+    .banners-content {
+        margin-bottom: 300px;
+        margin: 10px 10px 315px 10px;
+    }
 }
 
 @media (max-width: 725px) {
@@ -1280,6 +1302,16 @@ button:hover .star-6 {
         font-size: 2.0rem;
         margin: 30px -45px 0px 165px;
         font-style: italic;
+    }
+
+    .banners-content {
+        margin: 10px 10px 400px 10px;
+        grid-template-columns: repeat(auto-fit, 145px);
+    }
+
+    .banner-icon img {
+        height: 150px;
+        width: 150px;
     }
 
     .accordion-panel {
