@@ -784,6 +784,67 @@ button:hover .star-6 {
     line-height: 1.4;
 }
 
+.brands-content {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+}
+
+.brands-header {
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.brands-inner {
+    display: flex;
+    width: 100%;
+    animation: brands-content 15s linear infinite;
+}
+
+.brands-group {
+    display: flex;
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.brands-group span {
+    margin: 0 1.5rem;
+    white-space: nowrap;
+    background: #ffffff00;
+    padding: 4px 16px 4px 12px;
+    font-size: 1.2rem;
+}
+
+.brands-group span img {
+    width: 100px;
+}
+
+.gucci img {
+    width: 50px;
+}
+
+@keyframes brands-content {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px);
@@ -1238,12 +1299,33 @@ button:hover .star-6 {
         margin: 10px;
         grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
     }
+
+    .brands-header {
+        margin-top: 30px;
+        font-size: 28px;
+    }
+
+    .brands-inner {
+        animation: brands-content 15s linear infinite;
+    }
+
+    @keyframes brands-content {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-260%);
+        }
+    }
 }
 
 @media (max-width: 725px) {
+
     .navbar-left li:nth-child(n+4) {
         display: none;
     }
+
 }
 
 @media (max-width: 641px) {
@@ -1383,6 +1465,28 @@ button:hover .star-6 {
 
     .banner-description {
         font-size: 1.2rem;
+    }
+
+    .brands-header {
+        font-size: 20px;
+    }
+
+    .brands-inner {
+        animation: brands-content 15s linear infinite;
+    }
+
+    .brands-group span img {
+        width: 100px;
+    }
+
+    @keyframes brands-content {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-700%);
+        }
     }
 
     .accordion-panel {
