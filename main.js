@@ -58,6 +58,15 @@ themeToggle.addEventListener('change', () => {
     }
 });
 
+// sign-up button
+
+const toggleUserMenu = document.getElementById('icon-user-toggle');
+const iconUser = document.querySelector('.icon-user');
+
+toggleUserMenu.addEventListener('change', () => {
+    iconUser.classList.toggle('active', toggleUserMenu.checked);
+});
+
 // footer-panel
 
 var animatedAccordion = document.getElementsByClassName('accordion');
@@ -74,7 +83,7 @@ for (var i = 0; i < animatedAccordion.length; i++) {
   });
 }
 
-//Mobile Menu Sidenav 
+// Mobile Menu Sidenav 
 
 const toggleNavMenu = document.getElementById('toggleNav');
 const sidenavMenu = document.getElementById('mySidenav');

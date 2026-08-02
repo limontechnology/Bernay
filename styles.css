@@ -123,10 +123,8 @@ nav {
 .navbar-left ul li a,
 .navbar-right ul li a {
     text-decoration: none;
-    padding: 8px;
     border-radius: 8px;
     color: coral;
-    font-size: 1.5rem;
 }
 
 .navbar-right li {
@@ -153,6 +151,17 @@ a {
     width: 0%;
 }
 
+.menu-left-navbar {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
 
 .slideshow-container {
     position: relative;
@@ -432,6 +441,60 @@ a {
     position: relative;
     color: coral;
     cursor: pointer;
+}
+
+.icon-user {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-icon {
+    color: coral;
+    transition: 0.3s;
+}
+
+.user-icon:hover {
+    color: #b9972f;
+}
+
+.user-overlay-content {
+    position: absolute;
+    text-align: center;
+    margin: 27px 0 0 -95px;
+    background: white;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.user-overlay-content a {
+    display: flex;
+    padding: 13px 10px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #818181;
+    transition: 0.1s;
+}
+
+.user-overlay-content a svg {
+    width: 20px;
+    height: 20px;
+    fill: coral;
+    padding-right: 10px;
+}
+
+.user-overlay-content a:hover {
+    color: #d4af37;
+}
+
+#icon-user-toggle:checked~.user-overlay-content {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
 }
 
 .icon-shopping-cart {
